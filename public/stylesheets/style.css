@@ -1,0 +1,15 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+.navbar{
+	background:  linear-gradient(to right, #54a0ff, #48dbfb);  
+
+}
+.nav-link{
+	color: white
+}
+
+
+

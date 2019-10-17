@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light " width="100%">
+  <img src="/images/logo1.png" alt="" class="img-fluid mb-10" width="5%">
+  <a class="navbar-brand pl-4 pb-2" href="/admin" style="color:white"><b> Halaman Admin </b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" width="100%">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link pl-5 pt-3 active" href="/admin/kamar" style="font-size: 20px; color:white">Kelola Kamar <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5 pt-3" href="/admin/hotel" style="font-size: 20px; color:white"> Kelola Info Hotel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5 pt-3" href="#" style="font-size: 20px; color:white"> Kelola Berita & Promo</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle pl-5 pt-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="font-size:20px; color:white">
+          Kelola Rating
+        </a>
+        <div class="dropdown-menu ml-5" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">&#9733;1</a>
+          <a class="dropdown-item" href="#">&#9733;2</a>
+          <a class="dropdown-item" href="#">&#9733;3</a>
+          <a class="dropdown-item" href="#">&#9733;4</a>
+          <a class="dropdown-item" href="#">&#9733;5</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Lainnya...</a>
+        </div>
+      </li>
+
+
+
+    </ul>
+
+  </div>
+</nav>
+<div class="container mb-5">
+  &nbsp;
+  <form action="/admin/kamar/tambah" method="post">
+    <div class="form-group mb-3">
+      <h4 align="center" class="login mb-1" style="color:#0984e3"><b>TAMBAH DATA</b></h4>
+      <label for="inputNomor" class="email mb-1">
+        <h4>Nomor kamar </h4>
+      </label>
+      <input type="number" id="inputNomor" name="nomor" placeholder="Masukan Nomor Kamar" class="form-control mb-1">
+    </div>
+    <div class="form-group">
+      <label for="inputNama_kamar">
+        <h4>Nama Kamar </h4>
+      </label>
+      <input type="text" id="inputnama_kamar" name="namakamar" placeholder="Masukan Nama Kamar " class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="inputjumlah">
+        <h4>Fasilitas </h4>
+      </label>
+      <input type="text" id="inputjumlah" name="fasilitas" placeholder="Masukan Jumlah Tempat Tidur"
+        class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="inputtarif">
+        <h4>Harga </h4>
+      </label>
+      <input type="text" id="inputtarif" placeholder="Masukan Harga" name="harga" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary float-right">TAMBAH</button>
+    <button type="submit" class="btn btn-danger float-left"> <a href="/admin/kamar"
+        style="text-decoration: none; color:white">KEMBALI </a> </button>
+</div>

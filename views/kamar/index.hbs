@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg navbar-light " width="100%">
+  <img src="/images/logo1.png" alt="" class="img-fluid mb-10" width="5%">
+  <a class="navbar-brand pl-4 pb-2" href="/admin" style="color:white"><b> Halaman Admin </b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" width="100%">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link pl-5 pt-3 active" href="/admin/kamar" style="font-size: 20px; color:white">Kelola Kamar <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5 pt-3" href="/admin/hotel" style="font-size: 20px; color:white"> Kelola Info Hotel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pl-5 pt-3" href="#" style="font-size: 20px; color:white"> Kelola Berita & Promo</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle pl-5 pt-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="font-size:20px; color:white">
+          Kelola Rating
+        </a>
+        <div class="dropdown-menu ml-5" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">&#9733;1</a>
+          <a class="dropdown-item" href="#">&#9733;2</a>
+          <a class="dropdown-item" href="#">&#9733;3</a>
+          <a class="dropdown-item" href="#">&#9733;4</a>
+          <a class="dropdown-item" href="#">&#9733;5</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Lainnya...</a>
+        </div>
+      </li>
+
+
+
+    </ul>
+
+  </div>
+</nav>
+
+
+<center>
+  <h1 class="mt-5">Kelola Kamar</h1>
+</center>
+<div class="container">
+  <div class="float-right">
+    <a class="btn btn-primary ml-5" href="/admin/kamar/tambah" style="font-size: 17px; color:white"> + TAMBAH</a>
+    &nbsp;
+    &nbsp;
+
+    <a class="btn btn-danger " href="/login" style="font-size: 17px; color:white"> KELUAR </a>
+  </div>
+</div>
+&nbsp;
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nomor kamar</th>
+        <th scope="col">Nama Kamar</th>
+        <th scope="col">Fasilitas</th>
+        <th scope="col">Harga</th>
+        <th scope="col">Opsi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each nyoba}}
+      <tr>
+        <th>{{ nomor }}</th>
+        <td>{{ namakamar }}</td>
+        <td>{{ fasilitas }}</td>
+        <td>{{ harga }}</td>
+        <td>
+          <h6><a href="/admin/kamar/ubah/{{ id }}"> Ubah </a> |&nbsp;
+            <a href="/admin/kamar/{{ id }}/delete"> Delete</a> </h6>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
